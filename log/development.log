@@ -1,0 +1,1827 @@
+Started GET "/" for ::1 at 2019-06-22 11:01:27 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (46.6ms)
+Completed 200 OK in 634ms (Views: 359.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/search" for ::1 at 2019-06-22 11:25:43 -0400
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (32.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:4
+  [1m[35m (329.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (209.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreatePhotos (20190622151602)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "photos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "camera_name" varchar, "camera_fullname" varchar, "earth_date" date, "img_src" varchar, "sol" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190622151602_create_photos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190622151602"]]
+  ↳ bin/rails:4
+  [1m[35m (143.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-22 15:26:16.350748"], ["updated_at", "2019-06-22 15:26:16.350748"]]
+  ↳ bin/rails:4
+  [1m[35m (208.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/api/search" for ::1 at 2019-06-22 11:26:21 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/api/search"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2019-06-22 11:26:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/photos" for ::1 at 2019-06-22 11:26:46 -0400
+  
+LoadError (Unable to autoload constant Api::PhotosController, expected C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb to define it):
+  
+activesupport (5.2.3) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.3) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.3) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/photos" for ::1 at 2019-06-22 11:27:33 -0400
+  
+LoadError (Unable to autoload constant Api::PhotosController, expected C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb to define it):
+  
+activesupport (5.2.3) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:298:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:298:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.3) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.3) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/photos" for ::1 at 2019-06-22 11:27:49 -0400
+Processing by Api::PhotosController#search as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x0000000006fa3768>
+Did you mean?  try):
+  
+app/controllers/api/photos_controller.rb:3:in `search'
+Started GET "/api/photos" for ::1 at 2019-06-22 11:28:47 -0400
+Processing by Api::PhotosController#search as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x0000000005d61140>
+Did you mean?  try):
+  
+app/controllers/api/photos_controller.rb:3:in `search'
+Started GET "/api/photos" for ::1 at 2019-06-22 11:28:55 -0400
+Processing by Api::PhotosController#search as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x0000000006aad920>
+Did you mean?  try):
+  
+app/controllers/api/photos_controller.rb:3:in `search'
+Started GET "/api/photos" for ::1 at 2019-06-22 11:29:17 -0400
+Processing by Api::PhotosController#search as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x000000000719c7b8>
+Did you mean?  try):
+  
+app/controllers/api/photos_controller.rb:3:in `search'
+Started GET "/api/photos" for ::1 at 2019-06-22 11:29:38 -0400
+  
+LoadError (cannot load such file -- pry):
+  
+app/controllers/api/photos_controller.rb:1:in `<top (required)>'
+Started GET "/api/photos" for ::1 at 2019-06-22 11:30:13 -0400
+Processing by Api::PhotosController#search as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x0000000005eb5898>
+Did you mean?  try):
+  
+app/controllers/api/photos_controller.rb:3:in `search'
+Started GET "/api/photos" for ::1 at 2019-06-22 11:30:25 -0400
+Processing by Api::PhotosController#search as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x0000000006b3f398>
+Did you mean?  try):
+  
+app/controllers/api/photos_controller.rb:3:in `search'
+Started GET "/api/photos" for ::1 at 2019-06-22 11:31:06 -0400
+Processing by Api::PhotosController#search as HTML
+Completed 500 Internal Server Error in 23493ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/api/photos_controller.rb:4:in `search'
+Started GET "/api/photos" for ::1 at 2019-06-22 11:50:30 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::PhotosController#search as HTML
+Completed 500 Internal Server Error in 5750ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/api/photos_controller.rb:7:in `search'
+Started GET "/api/photos" for ::1 at 2019-06-22 11:50:48 -0400
+Processing by Api::PhotosController#search as HTML
+Completed 500 Internal Server Error in 4783ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/api/photos_controller.rb:7:in `search'
+Started GET "/api/photos" for ::1 at 2019-06-22 12:13:20 -0400
+Processing by Api::PhotosController#search as */*
+Completed 500 Internal Server Error in 20127ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/api/photos_controller.rb:7:in `search'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-22 12:14:13 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 429072ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/api/photos_controller.rb:7:in `search'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-22 12:21:26 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::PhotosController::Faraday):
+  
+app/controllers/api/photos_controller.rb:6:in `search'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-22 12:23:57 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::PhotosController::Faraday):
+  
+app/controllers/api/photos_controller.rb:6:in `search'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-22 12:24:51 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::PhotosController::Faraday):
+  
+app/controllers/api/photos_controller.rb:6:in `search'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 22:52:17 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::PhotosController::Faraday):
+  
+app/controllers/api/photos_controller.rb:6:in `search'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 22:52:55 -0400
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/api/photos_controller.rb:1:in `<top (required)>'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 22:54:31 -0400
+  
+LoadError (cannot load such file -- Faraday):
+  
+app/controllers/api/photos_controller.rb:1:in `<top (required)>'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 22:55:24 -0400
+  
+LoadError (cannot load such file -- Faraday):
+  
+app/controllers/api/photos_controller.rb:1:in `<top (required)>'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 22:56:03 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::PhotosController::Faraday):
+  
+app/controllers/api/photos_controller.rb:6:in `search'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 22:56:04 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::PhotosController::Faraday):
+  
+app/controllers/api/photos_controller.rb:6:in `search'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 22:57:23 -0400
+  
+SyntaxError (C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end
+...nute 33 in Learn Instruct video
+...                               ^):
+  
+app/controllers/api/photos_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 22:58:00 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Faraday):
+  
+app/controllers/api/photos_controller.rb:2:in `search2'
+app/controllers/api/photos_controller.rb:14:in `search'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:00:29 -0400
+  [1m[35m (19.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant API_URL):
+  
+app/controllers/api/photos_controller.rb:2:in `search2'
+app/controllers/api/photos_controller.rb:14:in `search'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:01:06 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 16585ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/api/photos_controller.rb:15:in `search'
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:01:52 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 287ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:02:58 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 245ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:04:31 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 225ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:07:51 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 282ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:08:39 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:09:29 -0400
+Completed 500 Internal Server Error in 49374ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/api/photos_controller.rb:11:in `search'
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 255ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:09:43 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 372ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:09:58 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 236ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:10:34 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 298ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:10:41 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 253ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:11:02 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 128328ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:13:11 -0400
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/api/photos_controller.rb:11:in `search'
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 320ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:13:17 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 259ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:14:16 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 152803ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/api/photos_controller.rb:13:in `search'
+Started GET "/" for ::1 at 2019-06-24 23:17:27 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (26.5ms)
+Completed 200 OK in 550ms (Views: 155.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:17:45 -0400
+Processing by Api::PhotosController#search as HTML
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 244ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos" for ::1 at 2019-06-24 23:18:09 -0400
+Processing by Api::PhotosController#search as HTML
+Completed 204 No Content in 193ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0" for ::1 at 2019-06-24 23:18:20 -0400
+Processing by Api::PhotosController#search as HTML
+  Parameters: {"sol"=>"0"}
+Completed 204 No Content in 15048ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-24 23:19:05 -0400
+Processing by Api::PhotosController#search as HTML
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 257ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 07:23:54 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 544ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 07:24:11 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 330ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 07:24:31 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 300ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 07:26:00 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 349ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 07:27:19 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 258ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 07:28:54 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 07:36:30 -0400
+Completed 500 Internal Server Error in 455919ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/api/photos_controller.rb:13:in `search'
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 271ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 07:36:38 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 204 No Content in 255ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 07:40:13 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 396ms (Views: 115.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 07:41:02 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 307ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 07:42:27 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 362ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 07:43:05 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 309ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 07:53:59 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 415ms (Views: 122.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:01:44 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 345ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:01:51 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 352ms (Views: 97.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:03:50 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 321ms (Views: 83.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:03:53 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 289ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=1&camera=fhaz" for ::1 at 2019-06-25 08:04:01 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"1", "camera"=>"fhaz"}
+Completed 200 OK in 237ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:04:06 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 356ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=fhaz" for ::1 at 2019-06-25 08:04:11 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"fhaz"}
+Completed 200 OK in 146ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:06:08 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 343ms (Views: 80.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:11:32 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 374ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:14:24 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 324ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:15:38 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 358ms (Views: 108.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:15:46 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 306ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:16:12 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 365ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:17:45 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 400ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:17:55 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 321ms (Views: 95.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:18:18 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 322ms (Views: 73.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:18:40 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 402ms (Views: 155.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:18:48 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 320ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:19:33 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 347ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:23:04 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 358ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:25:08 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 383ms (Views: 139.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:25:58 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 346ms (Views: 88.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:26:32 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 341ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:26:52 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 323ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:27:05 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 367ms (Views: 91.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:28:02 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 348ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=rhaz" for ::1 at 2019-06-25 08:28:25 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"rhaz"}
+Completed 200 OK in 320ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=mast" for ::1 at 2019-06-25 08:28:35 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"mast"}
+Completed 200 OK in 158ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=chemcam" for ::1 at 2019-06-25 08:28:46 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"chemcam"}
+Completed 200 OK in 228ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=chemcam" for ::1 at 2019-06-25 08:28:47 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"chemcam"}
+Completed 200 OK in 254ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAHLI" for ::1 at 2019-06-25 08:29:12 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAHLI"}
+Completed 200 OK in 133ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MARDI" for ::1 at 2019-06-25 08:29:19 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MARDI"}
+Started GET "/api/photos?sol=0&camera=mardi" for ::1 at 2019-06-25 08:29:23 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"mardi"}
+Started GET "/api/photos?sol=0&camera=navcam" for ::1 at 2019-06-25 08:29:31 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"navcam"}
+Completed 200 OK in 413ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=navcam" for ::1 at 2019-06-25 08:29:34 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"navcam"}
+Completed 200 OK in 462ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:29:37 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 742ms (Views: 185.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:29:42 -0400
+Started GET "/api/photos?sol=0&camera=mardi" for ::1 at 2019-06-25 08:29:45 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 1087ms (Views: 395.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:29:46 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"mardi"}
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 588ms (Views: 226.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:29:50 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 854ms (Views: 209.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=rhaz" for ::1 at 2019-06-25 08:30:54 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"rhaz"}
+Completed 200 OK in 899ms (Views: 212.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=rhaz" for ::1 at 2019-06-25 08:31:01 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"rhaz"}
+Completed 200 OK in 105155ms (Views: 94066.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 895ms (Views: 315.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=rhaz" for ::1 at 2019-06-25 08:31:05 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"rhaz"}
+Completed 200 OK in 964ms (Views: 468.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 117254ms (Views: 104964.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 108020ms (Views: 95507.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=rhaz" for ::1 at 2019-06-25 08:32:10 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"rhaz"}
+Completed 200 OK in 310ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:37:35 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 342ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:41:38 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 378ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:46:27 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 346ms (Views: 84.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:49:10 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 390ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:50:28 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 328ms (Views: 87.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=fhaz" for ::1 at 2019-06-25 08:57:54 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"fhaz"}
+Completed 200 OK in 473ms (Views: 123.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=f&camera=MAST" for ::1 at 2019-06-25 09:16:43 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"f", "camera"=>"MAST"}
+Completed 200 OK in 183ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=888898&camera=CHEMCAM" for ::1 at 2019-06-25 09:23:32 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"888898", "camera"=>"CHEMCAM"}
+Completed 200 OK in 186ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=6&camera=CHEMCAM" for ::1 at 2019-06-25 09:23:38 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"6", "camera"=>"CHEMCAM"}
+Completed 200 OK in 180ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=6&camera=FHAZ" for ::1 at 2019-06-25 09:23:41 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"6", "camera"=>"FHAZ"}
+Completed 200 OK in 152ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=6&camera=FHAZ" for ::1 at 2019-06-25 09:23:46 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"6", "camera"=>"FHAZ"}
+Completed 200 OK in 191ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=4&camera=FHAZ" for ::1 at 2019-06-25 09:23:49 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"4", "camera"=>"FHAZ"}
+Completed 200 OK in 147ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=2&camera=FHAZ" for ::1 at 2019-06-25 09:23:53 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"2", "camera"=>"FHAZ"}
+Completed 200 OK in 175ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=1&camera=FHAZ" for ::1 at 2019-06-25 09:23:56 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"1", "camera"=>"FHAZ"}
+Completed 200 OK in 167ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 09:23:58 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 319ms (Views: 84.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=-5&camera=MAST" for ::1 at 2019-06-25 09:43:26 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"-5", "camera"=>"MAST"}
+Completed 200 OK in 554ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=RHAZ" for ::1 at 2019-06-25 13:16:48 -0400
+  
+SyntaxError (C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:16: syntax error, unexpected =>, expecting keyword_end
+      :response => {
+                ^~
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:22: syntax error, unexpected ',', expecting keyword_end
+      }, :status => 400
+       ^
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:24: syntax error, unexpected keyword_elsif, expecting keyword_end
+    elsif params['camera'] == ""
+    ^~~~~
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/api/photos_controller.rb:16: syntax error, unexpected =>, expecting keyword_end
+app/controllers/api/photos_controller.rb:22: syntax error, unexpected ',', expecting keyword_end
+app/controllers/api/photos_controller.rb:24: syntax error, unexpected keyword_elsif, expecting keyword_end
+app/controllers/api/photos_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 13:17:17 -0400
+  
+SyntaxError (C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:16: syntax error, unexpected =>, expecting keyword_end
+      :response => {
+                ^~
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:22: syntax error, unexpected ',', expecting keyword_end
+      }, :status => 400
+       ^
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:24: syntax error, unexpected keyword_elsif, expecting keyword_end
+    elsif params['camera'] == ""
+    ^~~~~
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/api/photos_controller.rb:16: syntax error, unexpected =>, expecting keyword_end
+app/controllers/api/photos_controller.rb:22: syntax error, unexpected ',', expecting keyword_end
+app/controllers/api/photos_controller.rb:24: syntax error, unexpected keyword_elsif, expecting keyword_end
+app/controllers/api/photos_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/api/photos?sol=0" for ::1 at 2019-06-25 13:19:01 -0400
+  
+SyntaxError (C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:16: syntax error, unexpected =>, expecting keyword_end
+      :response => {
+                ^~
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:22: syntax error, unexpected ',', expecting keyword_end
+      }, :status => 400
+       ^
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:24: syntax error, unexpected keyword_elsif, expecting keyword_end
+    elsif params['camera'] == ""
+    ^~~~~
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/api/photos_controller.rb:16: syntax error, unexpected =>, expecting keyword_end
+app/controllers/api/photos_controller.rb:22: syntax error, unexpected ',', expecting keyword_end
+app/controllers/api/photos_controller.rb:24: syntax error, unexpected keyword_elsif, expecting keyword_end
+app/controllers/api/photos_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 13:39:13 -0400
+  
+SyntaxError (C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:15: syntax error, unexpected =>, expecting keyword_end
+      :response => {
+                ^~
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:21: syntax error, unexpected ',', expecting keyword_end
+      }, :status => 400
+       ^
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:23: syntax error, unexpected keyword_elsif, expecting keyword_end
+    elsif params['camera'] == ""
+    ^~~~~
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:34: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/api/photos_controller.rb:15: syntax error, unexpected =>, expecting keyword_end
+app/controllers/api/photos_controller.rb:21: syntax error, unexpected ',', expecting keyword_end
+app/controllers/api/photos_controller.rb:23: syntax error, unexpected keyword_elsif, expecting keyword_end
+app/controllers/api/photos_controller.rb:34: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 13:39:44 -0400
+  
+SyntaxError (C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:15: syntax error, unexpected =>, expecting keyword_end
+      :response => {
+                ^~
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:21: syntax error, unexpected ',', expecting keyword_end
+      }, :status => 400
+       ^):
+  
+app/controllers/api/photos_controller.rb:15: syntax error, unexpected =>, expecting keyword_end
+app/controllers/api/photos_controller.rb:21: syntax error, unexpected ',', expecting keyword_end
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 13:41:52 -0400
+  
+SyntaxError (C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:15: syntax error, unexpected =>, expecting keyword_end
+      :response => {
+                ^~
+C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:21: syntax error, unexpected ',', expecting keyword_end
+      }, :status => 400
+       ^):
+  
+app/controllers/api/photos_controller.rb:15: syntax error, unexpected =>, expecting keyword_end
+app/controllers/api/photos_controller.rb:21: syntax error, unexpected ',', expecting keyword_end
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 13:42:48 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 644ms (Views: 110.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAHLI" for ::1 at 2019-06-25 15:08:45 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAHLI"}
+Completed 200 OK in 302ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=1&camera=MAHLI" for ::1 at 2019-06-25 15:08:52 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"1", "camera"=>"MAHLI"}
+Completed 200 OK in 462ms (Views: 128.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=1&camera=MAHLI" for ::1 at 2019-06-25 15:10:38 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"1", "camera"=>"MAHLI"}
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"sol"=>"1", "camera"=>"MAHLI", "controller"=>"api/photos", "action"=>"search"} permitted: false>):
+  
+app/controllers/api/photos_controller.rb:7:in `search'
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 15:11:58 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"sol"=>"0", "camera"=>"FHAZ", "controller"=>"api/photos", "action"=>"search"} permitted: false>):
+  
+app/controllers/api/photos_controller.rb:7:in `search'
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 15:12:20 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 616ms (Views: 134.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 15:13:52 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 500 Internal Server Error in 27571ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/api/photos_controller.rb:33:in `search'
+Started GET "/api/photos?sol=0" for ::1 at 2019-06-25 15:14:25 -0400
+Processing by Api::PhotosController#search as HTML
+  Parameters: {"sol"=>"0"}
+Completed 500 Internal Server Error in 221505ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0" for ::1 at 2019-06-25 15:18:10 -0400
+  
+SystemExit (exit):
+  
+Started GET "/api/photos" for ::1 at 2019-06-25 15:18:10 -0400
+Started GET "/api/photos?sol=0" for ::1 at 2019-06-25 15:18:11 -0400
+Started GET "/" for ::1 at 2019-06-25 15:18:11 -0400
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/api/photos_controller.rb:33:in `search'
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (6.2ms)
+Completed 200 OK in 385ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by Api::PhotosController#search as HTML
+  Parameters: {"sol"=>"0"}
+  
+LoadError (Unable to autoload constant Api::PhotosController, expected C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb to define it):
+  
+  
+Completed 204 No Content in 16ms (ActiveRecord: 0.0ms)
+
+
+activesupport (5.2.3) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.3) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.3) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+LoadError (Unable to autoload constant Api::PhotosController, expected C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb to define it):
+  
+activesupport (5.2.3) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.3) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.3) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/photos?sol=0" for ::1 at 2019-06-25 15:18:25 -0400
+Processing by Api::PhotosController#search as HTML
+  Parameters: {"sol"=>"0"}
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0" for ::1 at 2019-06-25 15:18:52 -0400
+Processing by Api::PhotosController#search as HTML
+  Parameters: {"sol"=>"0"}
+Completed 500 Internal Server Error in 9639ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `search'
+app/controllers/api/photos_controller.rb:36:in `search'
+Started GET "/api/photos?sol=&camera=fhaz" for ::1 at 2019-06-25 15:41:57 -0400
+  
+SyntaxError (C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:42: syntax error, unexpected end-of-input, expecting keyword_end
+# write test suite
+                  ^):
+  
+app/controllers/api/photos_controller.rb:42: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/photos?sol=&camera=fhaz" for ::1 at 2019-06-25 15:42:22 -0400
+Processing by Api::PhotosController#search as HTML
+  Parameters: {"sol"=>"", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"sol"=>"", "camera"=>"fhaz", "controller"=>"api/photos", "action"=>"search"} permitted: false>):
+  
+app/controllers/api/photos_controller.rb:6:in `search'
+Started GET "/api/photos?sol=%20&camera=fhaz" for ::1 at 2019-06-25 15:42:40 -0400
+Processing by Api::PhotosController#search as HTML
+  Parameters: {"sol"=>" ", "camera"=>"fhaz"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"sol"=>" ", "camera"=>"fhaz", "controller"=>"api/photos", "action"=>"search"} permitted: false>):
+  
+app/controllers/api/photos_controller.rb:6:in `search'
+Started GET "/api/photos?sol=%20&camera=fhaz" for ::1 at 2019-06-25 16:18:01 -0400
+  
+SyntaxError (C:/Users/owner/Dev/projects/mars-photo-search/mars-photo-search-api/app/controllers/api/photos_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+# write test suite
+                  ^):
+  
+app/controllers/api/photos_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/photos?sol=%20&camera=fhaz" for ::1 at 2019-06-25 16:18:46 -0400
+Processing by Api::PhotosController#search as HTML
+  Parameters: {"sol"=>" ", "camera"=>"fhaz"}
+Completed 400 Bad Request in 21ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=%20&camera=fhaz" for ::1 at 2019-06-25 16:19:25 -0400
+Processing by Api::PhotosController#search as HTML
+  Parameters: {"sol"=>" ", "camera"=>"fhaz"}
+Completed 400 Bad Request in 10ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 18:55:45 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 9ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=%20&camera=fhaz" for ::1 at 2019-06-25 18:56:52 -0400
+Processing by Api::PhotosController#search as HTML
+  Parameters: {"sol"=>" ", "camera"=>"fhaz"}
+Completed 400 Bad Request in 27ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=%20&camera=" for ::1 at 2019-06-25 18:57:00 -0400
+Processing by Api::PhotosController#search as HTML
+  Parameters: {"sol"=>" ", "camera"=>""}
+Completed 400 Bad Request in 6ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 18:58:20 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 7ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:03:37 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 10ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:03:57 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 7ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:06:44 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 12ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:07:28 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 6ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=RHAZ" for ::1 at 2019-06-25 19:08:07 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"RHAZ"}
+Completed 400 Bad Request in 5ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=RHAZ" for ::1 at 2019-06-25 19:13:03 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"RHAZ"}
+Completed 400 Bad Request in 8ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:15:35 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 6ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:17:36 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 6ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:20:16 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 5ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:20:42 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 5ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:21:27 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 36ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:21:47 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 5ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:22:50 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 5ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:23:20 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 5ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:23:27 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 6ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=MAST" for ::1 at 2019-06-25 19:23:30 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"MAST"}
+Completed 400 Bad Request in 5ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAST" for ::1 at 2019-06-25 19:23:34 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAST"}
+Completed 200 OK in 275ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 19:23:40 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 342ms (Views: 103.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:24:45 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 6ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 19:24:48 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 333ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 19:24:54 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 355ms (Views: 99.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAST" for ::1 at 2019-06-25 19:24:56 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAST"}
+Completed 200 OK in 149ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 19:26:33 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 379ms (Views: 114.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAST" for ::1 at 2019-06-25 19:26:37 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAST"}
+Completed 200 OK in 137ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAST" for ::1 at 2019-06-25 19:26:39 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAST"}
+Completed 200 OK in 235ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:30:37 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 6ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=FHAZ" for ::1 at 2019-06-25 19:33:14 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"FHAZ"}
+Completed 400 Bad Request in 5ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 19:33:17 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 392ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=RHAZ" for ::1 at 2019-06-25 19:33:20 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"RHAZ"}
+Completed 200 OK in 332ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAST" for ::1 at 2019-06-25 19:33:24 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAST"}
+Completed 200 OK in 152ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAST" for ::1 at 2019-06-25 19:33:26 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAST"}
+Completed 200 OK in 141ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=NAVCAM" for ::1 at 2019-06-25 19:33:49 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"NAVCAM"}
+Completed 200 OK in 151ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=NAVCAM" for ::1 at 2019-06-25 19:34:41 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"NAVCAM"}
+Completed 200 OK in 197ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=NAVCAM" for ::1 at 2019-06-25 19:35:14 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"NAVCAM"}
+Completed 200 OK in 170ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 19:35:44 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 342ms (Views: 103.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAHLI" for ::1 at 2019-06-25 19:36:42 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAHLI"}
+Completed 200 OK in 157ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAHLI" for ::1 at 2019-06-25 19:36:46 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAHLI"}
+Completed 200 OK in 125ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAHLI" for ::1 at 2019-06-25 19:36:48 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAHLI"}
+Completed 200 OK in 230ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAHLI" for ::1 at 2019-06-25 19:37:21 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAHLI"}
+Completed 200 OK in 144ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MARDI" for ::1 at 2019-06-25 19:37:59 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MARDI"}
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 19:38:32 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 752ms (Views: 257.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 49786ms (Views: 38363.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=CHEMCAM" for ::1 at 2019-06-25 19:39:06 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"CHEMCAM"}
+Completed 200 OK in 331ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=NAVCAM" for ::1 at 2019-06-25 19:39:13 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"NAVCAM"}
+Completed 200 OK in 142ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=NAVCAM" for ::1 at 2019-06-25 19:39:54 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"NAVCAM"}
+Completed 200 OK in 456ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=NAVCAM" for ::1 at 2019-06-25 19:41:45 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"NAVCAM"}
+Completed 200 OK in 169ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=NAVCAM" for ::1 at 2019-06-25 19:41:50 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"NAVCAM"}
+Completed 200 OK in 133ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=NAVCAM" for ::1 at 2019-06-25 19:42:03 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"NAVCAM"}
+Completed 200 OK in 158ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=NAVCAM" for ::1 at 2019-06-25 19:42:07 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"NAVCAM"}
+Completed 200 OK in 158ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=NAVCAM" for ::1 at 2019-06-25 19:42:23 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"NAVCAM"}
+Completed 200 OK in 136ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=NAVCAM" for ::1 at 2019-06-25 19:44:55 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"NAVCAM"}
+Completed 200 OK in 179ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 19:45:07 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 370ms (Views: 84.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=RHAZ" for ::1 at 2019-06-25 19:45:13 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"RHAZ"}
+Completed 200 OK in 397ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=RHAZ" for ::1 at 2019-06-25 19:45:17 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>"RHAZ"}
+Completed 400 Bad Request in 7ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=RHAZ" for ::1 at 2019-06-25 19:45:32 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"RHAZ"}
+Completed 200 OK in 360ms (Views: 83.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAHLI" for ::1 at 2019-06-25 19:45:37 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAHLI"}
+Completed 200 OK in 168ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=1&camera=MAHLI" for ::1 at 2019-06-25 19:45:42 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"1", "camera"=>"MAHLI"}
+Completed 200 OK in 525ms (Views: 138.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=2&camera=MAHLI" for ::1 at 2019-06-25 19:45:46 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"2", "camera"=>"MAHLI"}
+Completed 200 OK in 151ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 19:47:34 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 319ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=" for ::1 at 2019-06-25 19:47:46 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>""}
+Completed 400 Bad Request in 7ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=" for ::1 at 2019-06-25 19:47:50 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>""}
+Completed 400 Bad Request in 5ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 19:48:21 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 282ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=&camera=" for ::1 at 2019-06-25 19:48:23 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"", "camera"=>""}
+Completed 400 Bad Request in 5ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 19:48:33 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 347ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=MAST" for ::1 at 2019-06-25 19:48:36 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"MAST"}
+Completed 200 OK in 136ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=1&camera=MAST" for ::1 at 2019-06-25 19:48:39 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"1", "camera"=>"MAST"}
+Completed 200 OK in 294ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=2&camera=MAST" for ::1 at 2019-06-25 19:48:52 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"2", "camera"=>"MAST"}
+Completed 200 OK in 180ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=3&camera=MAST" for ::1 at 2019-06-25 19:48:54 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"3", "camera"=>"MAST"}
+Completed 200 OK in 4015ms (Views: 2749.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=3&camera=MAST" for ::1 at 2019-06-25 19:48:59 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"3", "camera"=>"MAST"}
+Completed 200 OK in 6072ms (Views: 4706.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=3&camera=MAST" for ::1 at 2019-06-25 19:49:05 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"3", "camera"=>"MAST"}
+Completed 200 OK in 4835ms (Views: 3327.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=3&camera=MAST" for ::1 at 2019-06-25 19:49:10 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"3", "camera"=>"MAST"}
+Completed 200 OK in 5065ms (Views: 3818.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/photos?sol=0&camera=FHAZ" for ::1 at 2019-06-25 22:55:50 -0400
+Processing by Api::PhotosController#search as */*
+  Parameters: {"sol"=>"0", "camera"=>"FHAZ"}
+Completed 200 OK in 637ms (Views: 237.0ms | ActiveRecord: 0.0ms)
+
+

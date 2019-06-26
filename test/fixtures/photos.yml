@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  camera_name: MyString
+  camera_fullname: MyString
+  earth_date: 2019-06-22
+  img_src: MyString
+  sol: 1
+
+two:
+  camera_name: MyString
+  camera_fullname: MyString
+  earth_date: 2019-06-22
+  img_src: MyString
+  sol: 1
